@@ -28,5 +28,5 @@ app.use(`/`, require('./route/user_route'))
 //server call
 app.listen(PORT, ()=>{
     connectDatabase(); //connecting database
-    console.log(`server has been started @ http://localhost:${PORT}`)
+    console.log(`server has been started @ https://shiny-fawn-pinafore.cyclic.cloud/:${PORT}`)
 })

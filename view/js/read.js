@@ -4,7 +4,7 @@ let users = document.getElementById("users");
 const deleteUser = async (id) => {
     if(window.confirm(`Are you sure to delete user?`)) {
         console.log('id =', id);
-        await fetch(`http://localhost:4250/api/user/${id}`, {
+        await fetch(`https://shiny-fawn-pinafore.cyclic.cloud//api/user/${id}`, {
             method: "DELETE",
             headers: { "Content-Type": "application/json" }
         }).then(res => res.json())
@@ -56,7 +56,7 @@ function printData(data) {
 }
 
 (function(){
-    fetch(`http://localhost:3458/api/user/all`)
+    fetch(`https://shiny-fawn-pinafore.cyclic.cloud//api/user/all`)
         .then(res => res.json())
         .then(res => {
              printData(res.users)
