@@ -56,7 +56,7 @@ function printData(data) {
 }
 
 (function(){
-    fetch(`https://shiny-fawn-pinafore.cyclic.cloud//api/user/all`)
+    fetch(`https://shiny-fawn-pinafore.cyclic.cloud/api/user/all`)
         .then(res => res.json())
         .then(res => {
              printData(res.users)
